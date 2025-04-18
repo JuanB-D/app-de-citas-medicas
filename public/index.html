@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,25 +11,37 @@
 <body>
     <header class="header">
         <nav class="nav_bar">
-            <section class="left_side"><img src="src/ChatGPT Image 16 abr 2025, 06_41_59 p.m..png" alt="" width="60vh">
-                <h2>Pagina De Agendamiento De Citas Medicas</h2>
-            </section>
-            <ul class="rigth_side">
-                <li class="agendar_cita rdrct">Agendar Cita</li>
+            <div class="nav_left">
+                <a href="/" class="logo">
+                    <img src="src/ChatGPT Image 16 abr 2025, 06_41_59 p.m..png" alt="Logo de la clínica" width="60">
+                    <span>Agendamiento Médico</span>
+                </a>
+            </div>
+            <ul class="nav_right">
+                <li class="nav_item">
+                    <a href="./agendarCitas/index.html" class="btn btn-primary agendar_cita rdrct">Agendar Cita</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main class="main">
-        <div class="main_info">
-            <h1>Bienvenido A La Pagina De Agendamiento <br> De Citas Medicas</h1>
-            <button class="btn rdrct">Agendar Cita</button>
-        </div>
-        <img src="src/imagendeprueba.webp" alt="imagen de background" class="bkg-image">
+        <section class="hero">
+            <div class="hero_info">
+                <h1>Tu Próxima Cita Médica a un Click de Distancia</h1>
+                <p class="hero_subtitle">Encuentra y agenda citas con los mejores especialistas de manera fácil y rápida.</p>
+                <a href="./agendarCitas/index.html" class="btn btn-secondary rdrct">¡Agenda tu Cita Ahora!</a>
+            </div>
+            <div class="hero_image">
+                <img src="src/imagendeprueba.webp" alt="Imagen representativa de la salud">
+            </div>
+        </section>
     </main>
     <footer class="footer">
-        <p>Felipe Calle</p>
-        <p>All rigths reserved</p>
-        <p>16/04/2025</p>
+        <div class="footer_content">
+            <p>&copy; 2025 Felipe Calle. Todos los derechos reservados.</p>
+            <p>Desarrollado con &#x2764; para tu salud.</p>
+            <p class="footer_date">16/04/2025</p>
+        </div>
     </footer>
     <script>
         const rdrctButton = document.querySelectorAll('.rdrct');

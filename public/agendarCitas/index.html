@@ -1,34 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Servicios Médicos</title>
 </head>
 <body>
-        <section class="section_1">
-            <img src="../src/ChatGPT Image 16 abr 2025, 07_08_58 p.m..png" alt="" width="235vh" class="section_1_img">
+    <main class="services-grid">
+        <section class="service-card">
+            <div class="service-image">
+                <img src="../src/ChatGPT Image 16 abr 2025, 07_08_58 p.m..png" alt="Consulta General">
+            </div>
             <h3>Consulta General</h3>
-            <button class="Consulta_general btn">Agendar Ahora</button>
+            <button class="btn agendar-general">Agendar Ahora</button>
         </section>
-        <section class="section_2">
-            <img src="../src/ChatGPT Image 17 abr 2025, 10_51_29 a.m..png" alt="" height="235vh">
-            <h3>Consulta nutricionista</h3>
-            <button class="Consulta_nutricionista btn">Agendar Ahora</button>
+
+        <section class="service-card">
+            <div class="service-image">
+                <img src="../src/ChatGPT Image 17 abr 2025, 10_51_29 a.m..png" alt="Consulta Nutricionista">
+            </div>
+            <h3>Consulta Nutricionista</h3>
+            <button class="btn agendar-nutricionista">Agendar Ahora</button>
         </section>
-        <section class="section_3">
-            <img src="../src/ChatGPT Image 17 abr 2025, 10_55_58 a.m..png" alt="" height="235vh">
+
+        <section class="service-card">
+            <div class="service-image">
+                <img src="../src/ChatGPT Image 17 abr 2025, 10_55_58 a.m..png" alt="Consulta Pediatra">
+            </div>
             <h3>Consulta Pediatra</h3>
-            <button class="Consulta_pediatra btn">Agendar Ahora</button>
+            <button class="btn agendar-pediatra">Agendar Ahora</button>
         </section>
-        <script>
-            const btn = document.querySelectorAll('.btn');
-            btn.forEach(btnes =>{
-                btnes.addEventListener('click', () =>{
-                    window.location.href = '../calendario&formulario/index.html'
-                })
+    </main>
+
+    <script>
+        const btn = document.querySelectorAll('.btn');
+        btn.forEach(btnes =>{
+            btnes.addEventListener('click', () =>{
+                window.location.href = '../calendario&formulario/index.html'
             })
-        </script>
+        })
+    </script>
 </body>
 </html>

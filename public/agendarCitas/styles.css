@@ -1,52 +1,90 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
 }
-body{
-    height: 100vh;
-    width: 100%;
+
+.services-grid {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4vh;
-    font-family: sans-serif;
-    color: white;
+    overflow-x: auto;
+    padding-bottom: 30px;
+    gap: 20px; /* Espacio entre las tarjetas de servicio */
+    max-width: 1200px; /* Ancho máximo del contenedor principal */
+    margin: 20px auto; /* Centrar el contenedor en pantallas grandes */
 }
-section{
-    width: 40vh;
-    height: 70vh;
-    border: solid 1px;
-    border-radius: 1vh;
-    transition: 0.7s;
-    background-color: rgb(144, 61, 221);
+
+.service-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 0 0 300px; /* No crecer, no encoger, ancho fijo */
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
 }
-section:hover{
-    transform: translateY(-1vh);
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
-.section_1_img{
-    border-radius: 1vh 1vh 0 0;
+
+.service-image {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Recorta la imagen si no coincide con la proporción */
 }
-h3{
-    margin-top: 3vh;
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre el área manteniendo la proporción, puede recortar */
 }
-.btn{
-    width: 19vh;
-    padding: 1vh;
-    margin-left: 10vh;
-    display: flex;
-    margin-top: 10vh;
-    cursor: pointer;
-    border: solid 1px black;
-    background-color: white;
-    border-radius: 0.7vh;
-    transition: 0.7s all;
+
+h3 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
 }
-.btn:hover{
-    background-color: rgb(0, 0, 0);
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #3498db;
     color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column; /* Volver a vertical en pantallas pequeñas */
+        overflow-x: initial;
+    }
+
+    .service-card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }

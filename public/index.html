@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>|| Bienvenido</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav_bar">
+            <section class="left_side"><img src="src/ChatGPT Image 16 abr 2025, 06_41_59 p.m..png" alt="" width="60vh">
+                <h2>Pagina De Agendamiento De Citas Medicas</h2>
+            </section>
+            <ul class="rigth_side">
+                <li class="agendar_cita rdrct">Agendar Cita</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="main_info">
+            <h1>Bienvenido A La Pagina De Agendamiento <br> De Citas Medicas</h1>
+            <button class="btn rdrct">Agendar Cita</button>
+        </div>
+        <img src="src/imagendeprueba.webp" alt="imagen de background" class="bkg-image">
+    </main>
+    <footer class="footer">
+        <p>Felipe Calle</p>
+        <p>All rigths reserved</p>
+        <p>16/04/2025</p>
+    </footer>
+    <script>
+        const rdrctButton = document.querySelectorAll('.rdrct');
+        rdrctButton.forEach(button => {
+            button.addEventListener('click', () => {
+                window.location.href = "./agendarCitas/index.html"
+            })
+        })
+    </script>
+</body>
+
+</html>

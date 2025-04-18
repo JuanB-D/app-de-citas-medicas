@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de sesión y Registro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Formulario de inicio de sesión -->
+    <div class="form-container" id="loginForm">
+      <h2>Iniciar sesión</h2>
+      <form action="#" method="POST" class="login_form">
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <div class="form-link">
+        <p>¿No tienes cuenta? <a href="#" onclick="toggleForms('register')">Regístrate</a></p>
+      </div>
+    </div>
+
+    <!-- Formulario de registro -->
+    <div class="form-container" id="registerForm">
+      <h2>Registrarse</h2>
+      <form action="#" method="POST" class="register_form">
+        <input type="text" name="name" placeholder="Nombre completo" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+      </form>
+      <div class="form-link">
+        <p>¿Ya tienes cuenta? <a href="#" onclick="toggleForms('login')">Inicia sesión</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Función para cambiar entre los formularios de login y registro
+    function toggleForms(formType) {
+      const loginForm = document.getElementById('loginForm');
+      const registerForm = document.getElementById('registerForm');
+      
+      if (formType === 'login') {
+        loginForm.classList.add('active');
+        registerForm.classList.remove('active');
+      } else if (formType === 'register') {
+        registerForm.classList.add('active');
+        loginForm.classList.remove('active');
+      }
+    }
+
+    // Mostrar el formulario de inicio de sesión por defecto
+    window.onload = () => toggleForms('login');
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>

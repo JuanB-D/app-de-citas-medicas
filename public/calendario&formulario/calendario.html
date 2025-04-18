@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-color: #f8f0fa; /* Un lila muy claro de fondo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .appointment-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #6a0dad; /* Un morado intenso para el título */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #4a148c; /* Otro tono de morado para las etiquetas */
+            font-weight: bold;
+        }
+        input[type="date"],
+        input[type="time"],
+        textarea,
+        button {
+            width: calc(100% - 22px);
+            padding: 12px;
+            border: 1px solid #d1c4e9; /* Un lila más suave para los bordes */
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="date"]:focus,
+        input[type="time"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #9c27b0; /* Un morado más brillante para el focus */
+            box-shadow: 0 0 6px rgba(156, 39, 176, 0.5);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        button {
+            background-color: #9c27b0; /* Morado brillante para el botón */
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #7b1fa2; /* Un tono más oscuro al pasar el cursor */
+        }
+        .optional-text {
+            font-size: 0.9em;
+            color: #7e57c2; /* Otro tono de morado para el texto opcional */
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="appointment-card">
+        <h1>Agendar tu Cita</h1>
+        <form action="#" method="post" class="form-calendary">
+            <div class="form-group">
+                <label for="fecha">Día de la Cita:</label>
+                <input type="date" id="fecha" name="fechaD" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora">Hora de la Cita <span class="optional-text">(Opcional)</span>:</label>
+                <input type="time" id="hora" name="hora">
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">¿Algún detalle adicional? <span class="optional-text">(Opcional)</span>:</label>
+                <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Confirmar Día y Hora</button>
+        </form>
+    </div>
+    <script src="agendar.js"></script>
+</body>
+</html>

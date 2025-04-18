@@ -1,0 +1,108 @@
+/* General Styles*/
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Page Styles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    font-family: sans-serif;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 10vh;
+}
+.nav_bar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #a35ee4;
+    color: white;
+}
+.left_side{
+    display: flex;
+    gap: 2vh;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    height: 10vh;
+}
+h2{
+    align-content: center;
+}
+.rigth_side{
+    margin-right: 20vh;
+}
+.agendar_cita{
+    padding: 1.5vh;
+    border-radius: 8px;
+    background-color: blueviolet;
+    transition: 0.7s all;
+    cursor: pointer;
+}
+.agendar_cita:hover{
+    background-color: white;
+    color: black;
+    border: solid 1px;
+}
+.main{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    gap: 10vh;
+}
+.main_info{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+    margin-top: 10vh;
+    align-self: flex-start;
+
+}
+.bkg-image{
+    width: 70vh;
+    height: 50vh;
+}
+
+.btn{
+    border-radius: 8px;
+    background-color: blueviolet;
+    transition: 0.7s all;
+    cursor: pointer;
+    width: 20vh;
+    color: white;
+    border: none;
+    padding: 3vh;
+    margin-top: 10vh;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+    border: solid 1px;
+}
+.footer{
+    display: flex;
+    gap: 5vh;
+    width: 100%;
+    background-color: #350661;
+    color: white;
+    height: 10vh;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+p{
+    align-content: center;
+}

@@ -17,7 +17,7 @@ This proyect allows clients to sign up and login using JWT-based authentication.
 
 create an file .env and add the next vars
 PORT=3000
-ROOT_DB_PASSWORD="get this in google cloud"
+ROOT_DB_PASSWORD="get this by using sql"
 REFRESH_TOKEN="get this in google cloud"
 CLIENT_SECRET="get this in google cloud"
 CLIENT_ID="get this in google cloud"

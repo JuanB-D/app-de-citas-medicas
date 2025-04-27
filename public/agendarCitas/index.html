@@ -35,9 +35,14 @@
 
     <script>
         const btn = document.querySelectorAll('.btn');
+        const userData = localStorage.getItem('datosDelUsuario')
         btn.forEach(btnes =>{
             btnes.addEventListener('click', () =>{
-                window.location.href = '../calendario&formulario/index.html'
+                if(userData){
+                    window.location.href = '../calendario&formulario/calendario.html'
+                }else{
+                    window.location.href = '../calendario&formulario/index.html'
+                }
             })
         })
     </script>

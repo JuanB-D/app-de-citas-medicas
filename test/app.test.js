@@ -39,4 +39,24 @@ test('DELETE /DeleteAccount deberia eliminar un usuario', async () =>{
     .set('x-user-id', uuid)
 
     assert.equal(res.statusCode, 204)
+});
+
+test('POST /UserData deberia devolver los datos del usuario', async () =>{
+  const res = await request(app)
+  .post('/Auth&/UserData')
+  .send({
+    email:'felipecalle1113@gmail.com'
+  })
+  assert.equal(res.statusCode, 200)
+})
+
+test('POST /agendar-cita deberia enviar un email al destinatario con fecha de agendamiento y fecha de envio', async () =>{
+  const res = await request(app)
+  .post('/gmail/agendar-cita')
+  .send({
+    email: 'felipecalle1113@gmail.com',
+    fechaD: '20/20/20',
+    fechaA: '30/30/30'
+  })
+  assert.equal(res.statusCode, 200)
 })

@@ -6,5 +6,6 @@ usersAuthRoutes
 .post('/Reg&ster', userAuthController.Register)
 .post('/Log&n', userAuthController.Login)
 .delete('/DeleteAccount', userAuthController.deleteAccount)
+.post('/UserData', userAuthController.userData)
 
 export default usersAuthRoutes;

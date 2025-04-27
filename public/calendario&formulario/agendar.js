@@ -46,6 +46,7 @@ form.addEventListener('submit', (e) =>{
     })
     .then(datas => {
         console.log('all ok')
+        window.location.href = '../index.html'
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);

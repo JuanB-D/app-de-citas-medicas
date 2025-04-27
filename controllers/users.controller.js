@@ -55,6 +55,16 @@ const userAuthController = {
             }
             return res.status(204).json({message: 'user deleted succesfully'});
         })
+    },
+    userData: (req, res) =>{
+        const {email} = req.body;
+        const query = 'SELECT * FROM users WHERE email = ?';
+        connection.execute(query, [email], (err, results) =>{
+            if(err){
+                console.log(err);
+            }
+            return res.status(200).json(results)
+        })
     }
 }
 

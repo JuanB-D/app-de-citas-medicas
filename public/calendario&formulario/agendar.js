@@ -51,5 +51,28 @@ form.addEventListener('submit', (e) =>{
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
     });
+    fetch('http://localhost:3000/Auth&/saveCita',{
+        method: "POST",
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify({
+            tipo: localStorage.getItem('tipo'),
+            ...data
+        })
+    })
+    .then(response => {
+        console.log(response);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(datas => {
+        console.log('all ok')
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
     console.log(data)
 })

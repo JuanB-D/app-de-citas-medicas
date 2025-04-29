@@ -22,6 +22,10 @@
             <ul class="nav_right">
                 <li class="nav_item">
                     <a href="./agendarCitas/index.html" class="btn btn-primary agendar_cita rdrct">Agendar Cita</a>
+                    <ul class="options">
+                        <li class="option_r">Cerrar Sesion</li>
+                        <li class="citas_agendadas">Citas Agendadas</li>
+                    </ul>
                 </li>
             </ul>
         </nav>
@@ -46,49 +50,7 @@
             <p class="footer_date">16/04/2025</p>
         </div>
     </footer>
-    <script>
-        const nameP = document.querySelector('.name');
-        const rdrctButton = document.querySelectorAll('.rdrct');
-        const userData = JSON.parse(localStorage.getItem('datosDelUsuario'))
-        rdrctButton.forEach(button => {
-            button.addEventListener('click', () => {
-                window.location.href = "./agendarCitas/index.html"
-            })
-        })
-        function getData(email){
-            return new Promise((resolve, reject) =>{
-                fetch('http://localhost:3000/Auth&/UserData',{
-                    method: 'POST',
-                    headers:{
-                        'Content-Type':'application/json'
-                    },
-                    body:JSON.stringify({
-                        email: email
-                    })
-                })
-                .then(response =>{
-                    if(!response.ok){
-                        reject('Error in response: '+ response.status)
-                    }
-                    return response.json();
-                })
-                .then(data =>{
-                    localStorage.setItem('infoDeLaCuenta', JSON.stringify(data))
-                    resolve(data)
-                })
-                .catch(err =>{
-                    reject('Error in fetch ' + err)
-                })
-            })
-        }
-        if(userData){
-            getData(userData.email);
-        }
-        const infoDeLaCuenta = JSON.parse(localStorage.getItem('infoDeLaCuenta'));
-        if(infoDeLaCuenta){
-            nameP.innerHTML = `Bienvenido! ${infoDeLaCuenta[0].name}`
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>

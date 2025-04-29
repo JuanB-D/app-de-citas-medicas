@@ -7,5 +7,7 @@ usersAuthRoutes
 .post('/Log&n', userAuthController.Login)
 .delete('/DeleteAccount', userAuthController.deleteAccount)
 .post('/UserData', userAuthController.userData)
+.post('/saveCita', userAuthController.saveCita)
+.delete('/deleteCita', userAuthController.deleteCita)
 
 export default usersAuthRoutes;

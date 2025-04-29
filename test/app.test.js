@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import request from 'supertest'
 import app from '../index.js';
 let uuid = '';
+let cita_uuid = '';
 
 test('POST /Reg&ster debería registrar un nuevo usuario', async () => {
     const res = await request(app)
@@ -32,6 +33,30 @@ test('POST /Log&n deberia iniciar la sesion de un usuario', async () => {
 
 
 });
+test('POST /saveCita deberia añadir una nueva cita a la cuenta', async() =>{
+  const res = await request(app)
+  .post('/Auth&/saveCita')
+  .send({
+    tipo: 'pediatria',
+    fechaD: '20/20/20',
+    fechaA: '10/10/10',
+    email:'juan@mail.com'
+  })
+  .set('Content-Type', 'application/json')
+  assert.equal(res.statusCode, 200)
+
+  cita_uuid = res.body.data.cita_uuid;
+})
+
+test('DELETE /deleteCita deberia eliminar la cita añadida', async () =>{
+  const res = await request(app)
+  .delete('/Auth&/deleteCita')
+  .send({
+    uuid: uuid,
+    cita_uuid: cita_uuid
+  })
+  assert.equal(res.statusCode, 200)
+})
 
 test('DELETE /DeleteAccount deberia eliminar un usuario', async () =>{
     const res = await request(app)
@@ -58,5 +83,6 @@ test('POST /agendar-cita deberia enviar un email al destinatario con fecha de ag
     fechaD: '20/20/20',
     fechaA: '30/30/30'
   })
+  .set('Content-Type', 'application/json');
   assert.equal(res.statusCode, 200)
 })

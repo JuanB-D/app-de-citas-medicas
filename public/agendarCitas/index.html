@@ -13,7 +13,7 @@
                 <img src="../src/ChatGPT Image 16 abr 2025, 07_08_58 p.m..png" alt="Consulta General">
             </div>
             <h3>Consulta General</h3>
-            <button class="btn agendar-general">Agendar Ahora</button>
+            <button class="btn agendar-general A">Agendar Ahora</button>
         </section>
 
         <section class="service-card">
@@ -21,7 +21,7 @@
                 <img src="../src/ChatGPT Image 17 abr 2025, 10_51_29 a.m..png" alt="Consulta Nutricionista">
             </div>
             <h3>Consulta Nutricionista</h3>
-            <button class="btn agendar-nutricionista">Agendar Ahora</button>
+            <button class="btn agendar-nutricionista B">Agendar Ahora</button>
         </section>
 
         <section class="service-card">
@@ -29,12 +29,26 @@
                 <img src="../src/ChatGPT Image 17 abr 2025, 10_55_58 a.m..png" alt="Consulta Pediatra">
             </div>
             <h3>Consulta Pediatra</h3>
-            <button class="btn agendar-pediatra">Agendar Ahora</button>
+            <button class="btn agendar-pediatra C">Agendar Ahora</button>
         </section>
     </main>
 
     <script>
         const btn = document.querySelectorAll('.btn');
+        const tipos = {
+            A:document.querySelector('.A'),
+            B:document.querySelector('.B'),
+            C:document.querySelector('.C')
+        }
+        tipos.A.addEventListener('click', () =>{
+            localStorage.setItem('tipo', 'Consulta General')
+        })
+        tipos.B.addEventListener('click', () =>{
+            localStorage.setItem('tipo', 'Consulta Nutricionista')
+        })
+        tipos.C.addEventListener('click', () =>{
+            localStorage.setItem('tipo', 'Consulta Pediatria')
+        })
         const userData = localStorage.getItem('datosDelUsuario')
         btn.forEach(btnes =>{
             btnes.addEventListener('click', () =>{

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Citas Médicas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .citas-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .cita-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .cita-card:hover {
+      transform: translateY(-5px);
+    }
+    .cita-info {
+      margin-bottom: 15px;
+    }
+    .cita-info strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    .acciones {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    .btn-editar {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .btn-editar:hover {
+      background-color: #45a049;
+    }
+    .btn-eliminar {
+      background-color: #f44336;
+      color: white;
+    }
+    .btn-eliminar:hover {
+      background-color: #e53935;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Citas Médicas Agendadas</h1>
+
+  <div class="citas-container">
+
+
+    <!-- Puedes agregar más cards de citas aquí -->
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+</html>

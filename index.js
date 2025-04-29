@@ -15,6 +15,8 @@ app.get('/', (req, res) =>{
 })
 import usersAuthRoutes from './routes/users.routes.js';
 app.use('/Auth&', usersAuthRoutes)
+import citasRoutes from './routes/citas.routes.js';
+app.use('/Citas', citasRoutes)
 import GmailRouter from './routes/appointmen.js';
 app.use('/gmail', GmailRouter);
 app.listen(PORT, () =>{

@@ -51,7 +51,7 @@ form.addEventListener('submit', (e) =>{
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
     });
-    fetch('http://localhost:3000/Auth&/saveCita',{
+    fetch('http://localhost:3000/Citas/saveCita',{
         method: "POST",
         headers:{
             'Content-Type': 'application/json'

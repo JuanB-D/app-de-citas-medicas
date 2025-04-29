@@ -35,7 +35,7 @@ test('POST /Log&n deberia iniciar la sesion de un usuario', async () => {
 });
 test('POST /saveCita deberia añadir una nueva cita a la cuenta', async() =>{
   const res = await request(app)
-  .post('/Auth&/saveCita')
+  .post('/Citas/saveCita')
   .send({
     tipo: 'pediatria',
     fechaD: '20/20/20',
@@ -50,7 +50,7 @@ test('POST /saveCita deberia añadir una nueva cita a la cuenta', async() =>{
 
 test('DELETE /deleteCita deberia eliminar la cita añadida', async () =>{
   const res = await request(app)
-  .delete('/Auth&/deleteCita')
+  .delete('/Citas/deleteCita')
   .send({
     uuid: uuid,
     cita_uuid: cita_uuid

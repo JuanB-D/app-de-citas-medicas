@@ -1,5 +1,6 @@
 import express from 'express';
 import userAuthController from '../controllers/users.controller.js';
+import citasController from '../controllers/citas.controller.js';
 const usersAuthRoutes = express.Router();
 
 usersAuthRoutes
@@ -7,7 +8,4 @@ usersAuthRoutes
 .post('/Log&n', userAuthController.Login)
 .delete('/DeleteAccount', userAuthController.deleteAccount)
 .post('/UserData', userAuthController.userData)
-.post('/saveCita', userAuthController.saveCita)
-.delete('/deleteCita', userAuthController.deleteCita)
-
 export default usersAuthRoutes;

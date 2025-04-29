@@ -89,7 +89,7 @@ if(infoDeLaCuenta){
             boton.addEventListener('click', (event) => {
                 const citaId = event.target.getAttribute('data-id');
     
-                fetch('http://localhost:3000/Auth&/deleteCita', {
+                fetch('http://localhost:3000/Citas/deleteCita', {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
